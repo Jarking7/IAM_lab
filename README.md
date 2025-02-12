@@ -24,7 +24,7 @@ Este repositorio documenta los pasos realizados para configurar un bucket S3, po
   
   Aquí está el ejemplo de la política que se creó:
   ```json
-  {
+  
     "Version": "2012-10-17",
     "Statement": [
         {
@@ -49,7 +49,7 @@ Este repositorio documenta los pasos realizados para configurar un bucket S3, po
             "Resource": "arn:aws:s3:::bucket-lab-iam-jafet/private/*"
         }
     ]
-}
+
 ## 3. Configuración de IAM - Usuarios y Grupos
 
 - Se creó un **grupo de IAM** llamado **`lectores-s3`**.
@@ -76,7 +76,6 @@ Este repositorio documenta los pasos realizados para configurar un bucket S3, po
             "Resource": "*"
         }
     ]
-}
 }
 
 ## 5. Creación de Rol y Asignación a EC2
