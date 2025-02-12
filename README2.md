@@ -15,11 +15,11 @@ En este proyecto se utilizó Terraform para automatizar la creación de los sigu
     "Version" = "2012-10-17"
     "Statement" = [
       {
-        "Effect"    = "Allow"
-        "Principal" = {
-        "Service" = "lambda.amazonaws.com"
+        "Effect"    : "Allow"
+        "Principal" : {
+        "Service" : "lambda.amazonaws.com"
         }
-        "Action"   = "sts:AssumeRole"
+        "Action"   : "sts:AssumeRole"
       },
     ]
 }
@@ -33,13 +33,13 @@ Aquí se encuentra el JSON de la política:
     "Version" = "2012-10-17"
     "Statement" = [
       {
-        "Effect"   = "Allow"
-        "Action"   = [
+        "Effect"   : "Allow"
+        "Action"   : [
           "lambda:InvokeFunction",
           "lambda:ListFunctions",
           "lambda:GetFunction"
         ]
-        "Resource" = "*"
+        "Resource" : "*"
       },
     ]
 }
