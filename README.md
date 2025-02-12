@@ -200,7 +200,7 @@ Este ejercicio demuestra la importancia de **gestionar adecuadamente los permiso
         }
     ]
 
-
+```
 ## 5. Creation of Role and Assignment to EC2
 
 - An **IAM role** was created with the managed policy **`AmazonS3ReadOnlyAccess`**.
