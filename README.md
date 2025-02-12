@@ -102,7 +102,7 @@ Este repositorio documenta los pasos realizados para configurar un bucket S3, po
 
 ## 6. Pruebas con Usuarios y AWS CLI
 
-- Se asignaron **keys temporales** a los usuarios **`usuario1jafet`** y **`usuario2jafet`** para permitirles acceder a AWS CLI desde PowerShell con sus credenciales.
+- Se asignaron **keys temporales** a los usuarios **`usuario1jafet`** , **`usuario2jafet`** y **`admin-s3-jafet`** para permitirles acceder a AWS CLI desde PowerShell con sus credenciales.
   
   A continuación se muestran los resultados de las pruebas realizadas, donde se verifica que los usuarios pueden acceder correctamente a los archivos en la carpeta `public`, pero no tienen acceso a la carpeta `private`:
 ![logs_usuario1](https://github.com/user-attachments/assets/1b87b909-de19-4c64-9dd5-0bfa31b5f85d)
@@ -226,7 +226,7 @@ Este ejercicio demuestra la importancia de **gestionar adecuadamente los permiso
 
 ## 6. Testing with Users and AWS CLI
 
-- **Temporary keys** were assigned to users **`usuario1jafet`** and **`usuario2jafet`** to allow them to access AWS CLI from PowerShell using their credentials.
+- **Temporary keys** were assigned to users  **`usuario1jafet`** , **`usuario2jafet`** and **`admin-s3-jafet`** to allow them to access AWS CLI from PowerShell using their credentials.
   
   Below are the results of the tests, where it is verified that the users can correctly access the files in the `public` folder but do not have access to the `private` folder:
 
