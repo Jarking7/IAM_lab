@@ -191,6 +191,7 @@ After creating the resources, the user access to the AWS console was configured.
    - List existing Lambda functions.
    - Invoke Lambda functions.
    - Get detailed information about Lambda functions.
+     
 The user now has access only to Lambda functions, with read and invoke permissions, ensuring controlled and secure access to AWS resources.
 ![user3-jafet](https://github.com/user-attachments/assets/344a2bdc-1d84-4279-8be7-e26caa3ac6e6)
 ![user3-jafet_lambda](https://github.com/user-attachments/assets/129fab60-f45e-4ada-b2a8-5c730ea9299d)
