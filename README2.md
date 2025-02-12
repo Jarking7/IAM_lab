@@ -10,7 +10,7 @@ En este proyecto se utilizó Terraform para automatizar la creación de los sigu
 - **Creación de un Grupo IAM**: Se creó un grupo IAM al cual se asignó el usuario.
 - **Creación de un Rol IAM para Lambda**: Se creó un rol IAM con permisos adecuados para ejecutar funciones Lambda.  
 
-  ```json
+```json
  {
     Version = "2012-10-17"
     Statement = [
@@ -70,7 +70,6 @@ Para crear los recursos en AWS, se ejecutaron los siguientes comandos de Terrafo
 terraform init    # Inicializa el entorno de Terraform
 terraform plan    # Muestra el plan de ejecución antes de aplicar cambios
 terraform apply   # Aplica los cambios en AWS
-```
 
 ## 3. Verificación en la Consola de AWS
 
