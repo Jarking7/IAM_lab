@@ -77,6 +77,7 @@ Este repositorio documenta los pasos realizados para configurar un bucket S3, po
         }
     ]
 }
+}
 
 ## 5. Creación de Rol y Asignación a EC2
 
