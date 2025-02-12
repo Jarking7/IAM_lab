@@ -64,7 +64,7 @@ Este repositorio documenta los pasos realizados para configurar un bucket S3, po
 - Se creó un usuario administrador llamado **`admin-s3-jafet`**.
 - A este usuario se le asignó la política administrada **`AmazonS3FullAccess`**, lo que le otorga permisos completos sobre S3, permitiéndole realizar cualquier operación sobre los recursos de S3.
 ```json
- {
+ 
     "Version": "2012-10-17",
     "Statement": [
         {
@@ -76,13 +76,13 @@ Este repositorio documenta los pasos realizados para configurar un bucket S3, po
             "Resource": "*"
         }
     ]
-}
+
 
 ## 5. Creación de Rol y Asignación a EC2
 
 - Se creó un **rol de IAM** con la política administrada **`AmazonS3ReadOnlyAccess`**.
 ```json
-{
+
     "Version": "2012-10-17",
     "Statement": [
         {
@@ -97,7 +97,7 @@ Este repositorio documenta los pasos realizados para configurar un bucket S3, po
             "Resource": "*"
         }
     ]
-}
+
 - Este rol fue asignado a la instancia **`test-ec2-jafet`** para otorgar acceso de solo lectura a los recursos de S3 desde la instancia EC2.
 
 ## 6. Pruebas con Usuarios y AWS CLI
@@ -146,7 +146,7 @@ Este ejercicio demuestra la importancia de **gestionar adecuadamente los permiso
   
   Here is an example of the policy that was created:
   ```json
-  {
+  
     "Version": "2012-10-17",
     "Statement": [
         {
@@ -171,7 +171,7 @@ Este ejercicio demuestra la importancia de **gestionar adecuadamente los permiso
             "Resource": "arn:aws:s3:::bucket-lab-iam-jafet/private/*"
         }
     ]
-}
+
 ## 3. IAM Configuration - Users and Groups
 
 - An **IAM group** called **`lectores-s3`** was created.
@@ -187,7 +187,7 @@ Este ejercicio demuestra la importancia de **gestionar adecuadamente los permiso
 - This user was assigned the managed policy **`AmazonS3FullAccess`**, which grants full permissions on S3, allowing them to perform any operation on S3 resources.
 
 ```json
- {
+ 
     "Version": "2012-10-17",
     "Statement": [
         {
@@ -199,14 +199,14 @@ Este ejercicio demuestra la importancia de **gestionar adecuadamente los permiso
             "Resource": "*"
         }
     ]
-}
+
 
 ## 5. Creation of Role and Assignment to EC2
 
 - An **IAM role** was created with the managed policy **`AmazonS3ReadOnlyAccess`**.
 
 ```json
-{
+
     "Version": "2012-10-17",
     "Statement": [
         {
@@ -221,7 +221,7 @@ Este ejercicio demuestra la importancia de **gestionar adecuadamente los permiso
             "Resource": "*"
         }
     ]
-}
+
 - This role was assigned to the **`test-ec2-jafet`** EC2 instance to grant read-only access to S3 resources from the EC2 instance.
 
 ## 6. Testing with Users and AWS CLI
