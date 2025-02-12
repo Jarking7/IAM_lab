@@ -12,8 +12,8 @@ En este proyecto se utilizó Terraform para automatizar la creación de los sigu
 ```json
 
 {
-    "Version" = "2012-10-17"
-    "Statement" = [
+    "Version" : "2012-10-17"
+    "Statement" : [
       {
         "Effect"    : "Allow"
         "Principal" : {
@@ -30,8 +30,8 @@ Aquí se encuentra el JSON de la política:
 
 ```json
 {
-    "Version" = "2012-10-17"
-    "Statement" = [
+    "Version" : "2012-10-17"
+    "Statement" : [
       {
         "Effect"   : "Allow"
         "Action"   : [
