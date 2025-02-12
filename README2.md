@@ -24,11 +24,11 @@ En este proyecto se utilizó Terraform para automatizar la creación de los sigu
     ]
   }
 
- ```
+```
 Creación de una Política IAM: Se creó una política IAM que permite invocar, listar y obtener funciones Lambda.
 Aquí se encuentra el JSON de la política:
 
- ```json
+```json
 {
     Version = "2012-10-17"
     Statement = [
