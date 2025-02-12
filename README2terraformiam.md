@@ -100,3 +100,98 @@ El usuario ahora tiene acceso solo a las funciones de Lambda, con permisos de le
 ![user3-jafet_lambda](https://github.com/user-attachments/assets/129fab60-f45e-4ada-b2a8-5c730ea9299d)
 
 
+# Terraform Project for IAM Management on AWS
+
+This project contains the infrastructure needed to manage IAM users, groups, roles, and policies on AWS using **Terraform**.
+
+## 1. Infrastructure Created
+
+In this project, Terraform was used to automate the creation of the following resources on AWS:
+
+- **Creation of an IAM User**: An IAM user was created with controlled permissions.
+- **Creation of an IAM Group**: An IAM group was created and the user was assigned to it.
+- **Creation of an IAM Role for Lambda**: An IAM role was created with appropriate permissions to execute Lambda functions.  
+```json
+{
+    "Version" : "2012-10-17",
+    "Statement" : [
+      {
+        "Effect"    : "Allow",
+        "Principal" : {
+          "Service" : "lambda.amazonaws.com"
+        },
+        "Action"   : "sts:AssumeRole"
+      }
+    ]
+}
+```
+- **Creation of an IAM Policy**: An IAM policy was created that allows invoking, listing, and getting Lambda functions.  
+Here is the JSON for the policy:
+```json
+{
+    "Version" : "2012-10-17"
+    "Statement" : [
+      {
+        "Effect"   : "Allow"
+        "Action"   : [
+          "lambda:InvokeFunction",
+          "lambda:ListFunctions",
+          "lambda:GetFunction"
+        ]
+        "Resource" : "*"
+      },
+    ]
+}
+```
+- **Attaching Policies to the IAM Group**: The necessary policies were attached to the IAM group, including permissions to work with Lambda.
+
+- **Creation of a Policy to Assume the Lambda Role**: An IAM policy was created that allows the user to assume the Lambda role.
+```json
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": "sts:AssumeRole",
+      "Resource": "aws_iam_role.lambda_role.arn"
+    }
+  ]
+}
+
+```
+## 2. Commands Used
+
+To create the resources on AWS, the following Terraform commands were executed:
+
+1. **Initialize the Terraform Environment**:
+   This command downloads the necessary providers and configures the working environment.
+
+```bash
+terraform init    # Initializes the Terraform environment
+terraform plan    # Shows the execution plan before applying changes
+terraform apply   # Applies the changes to AWS
+
+```
+
+## 3. Verification in the AWS Console
+
+Once the infrastructure was applied with Terraform, I accessed the **IAM** console in AWS to confirm the successful creation of the following resources:
+
+- **IAM User**: It was verified that the user was created correctly in the IAM service.
+- **IAM Group**: It was verified that the IAM group was created and that the user was added to that group.
+- **IAM Roles**: It was verified that the Lambda role was created correctly with the appropriate permissions.
+- **IAM Policies**: It was verified that the necessary policies were created and attached to the IAM group.
+
+## 4. User Access to the Console
+
+After creating the resources, the user access to the AWS console was configured. To do this, the following steps were performed:
+
+1. **One-Time Password Setup**: A **one-time password** was configured for the user. This allows the user to log in for the first time to the console.
+2. **Limited Access to Lambda Functions**: The user was configured with specific permissions to access only Lambda functions, allowing them to:
+   - List existing Lambda functions.
+   - Invoke Lambda functions.
+   - Get detailed information about Lambda functions.
+The user now has access only to Lambda functions, with read and invoke permissions, ensuring controlled and secure access to AWS resources.
+![user3-jafet](https://github.com/user-attachments/assets/344a2bdc-1d84-4279-8be7-e26caa3ac6e6)
+![user3-jafet_lambda](https://github.com/user-attachments/assets/129fab60-f45e-4ada-b2a8-5c730ea9299d)
+
