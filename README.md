@@ -77,7 +77,7 @@ Este repositorio documenta los pasos realizados para configurar un bucket S3, po
         }
     ]
 }
-
+```
 ## 5. Creación de Rol y Asignación a EC2
 
 - Se creó un **rol de IAM** con la política administrada **`AmazonS3ReadOnlyAccess`**.
@@ -97,7 +97,7 @@ Este repositorio documenta los pasos realizados para configurar un bucket S3, po
             "Resource": "*"
         }
     ]
-
+```
 - Este rol fue asignado a la instancia **`test-ec2-jafet`** para otorgar acceso de solo lectura a los recursos de S3 desde la instancia EC2.
 
 ## 6. Pruebas con Usuarios y AWS CLI
