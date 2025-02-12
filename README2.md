@@ -22,7 +22,7 @@ En este proyecto se utilizó Terraform para automatizar la creación de los sigu
         Action   = "sts:AssumeRole"
       },
     ]
-  }
+}
 
 ```
 Creación de una Política IAM: Se creó una política IAM que permite invocar, listar y obtener funciones Lambda.
@@ -42,7 +42,7 @@ Aquí se encuentra el JSON de la política:
         Resource = "*"
       },
     ]
-  }
+}
 ```
 
 - **Adjuntar Políticas al Grupo IAM: Se adjuntaron las políticas necesarias al grupo de IAM que incluye permisos para trabajar con Lambda.
