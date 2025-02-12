@@ -9,8 +9,8 @@ En este proyecto se utilizó Terraform para automatizar la creación de los sigu
 - **Creación de un Usuario IAM**: Se creó un usuario IAM con permisos controlados.
 - **Creación de un Grupo IAM**: Se creó un grupo IAM al cual se asignó el usuario.
 - **Creación de un Rol IAM para Lambda**: Se creó un rol IAM con permisos adecuados para ejecutar funciones Lambda.  
-
 ```json
+
  {
     Version = "2012-10-17"
     Statement = [
@@ -23,6 +23,7 @@ En este proyecto se utilizó Terraform para automatizar la creación de los sigu
       },
     ]
   }
+
  ```
 Creación de una Política IAM: Se creó una política IAM que permite invocar, listar y obtener funciones Lambda.
 Aquí se encuentra el JSON de la política:
@@ -42,7 +43,8 @@ Aquí se encuentra el JSON de la política:
       },
     ]
   }
- ```
+```
+
 - **Adjuntar Políticas al Grupo IAM: Se adjuntaron las políticas necesarias al grupo de IAM que incluye permisos para trabajar con Lambda.
 
 - **Creación de Política para Asumir el Rol de Lambda: Se creó una política IAM que permite que el usuario asuma el rol de Lambda.
@@ -58,6 +60,7 @@ Aquí se encuentra el JSON de la política:
     }
   ]
 }
+
 ```
 ## 2. Comandos utilizados
 
@@ -66,11 +69,11 @@ Para crear los recursos en AWS, se ejecutaron los siguientes comandos de Terrafo
 1. **Inicializar el entorno de Terraform**:
    Este comando descarga los proveedores necesarios y configura el entorno de trabajo.
 
-   ```bash
+```bash
 terraform init    # Inicializa el entorno de Terraform
 terraform plan    # Muestra el plan de ejecución antes de aplicar cambios
 terraform apply   # Aplica los cambios en AWS
-
+```
 ## 3. Verificación en la Consola de AWS
 
 Una vez aplicada la infraestructura con Terraform, accedí a la consola de **IAM** en AWS para confirmar la creación exitosa de los siguientes recursos:
