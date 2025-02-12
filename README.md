@@ -221,7 +221,7 @@ Este ejercicio demuestra la importancia de **gestionar adecuadamente los permiso
             "Resource": "*"
         }
     ]
-
+```
 - This role was assigned to the **`test-ec2-jafet`** EC2 instance to grant read-only access to S3 resources from the EC2 instance.
 
 ## 6. Testing with Users and AWS CLI
